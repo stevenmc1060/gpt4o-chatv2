@@ -53,6 +53,14 @@ function App() {
     setInput("");
     setLoading(true);
 
+    const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
+
+    if (!apiKey) {
+      console.error("Missing API key: VITE_OPENAI_API_KEY is not set.");
+      setLoading(false);
+      return;
+    }
+
     try {
       const response = await fetch(
         "https://taskmgrpoc.openai.azure.com/openai/deployments/gpt-4/chat/completions?api-version=2025-01-01-preview",
@@ -60,7 +68,7 @@ function App() {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "api-key": "YOUR_API_KEY",
+            "api-key": apiKey,
           },
           body: JSON.stringify({
             messages: newMessages,
@@ -152,3 +160,4 @@ function App() {
 }
 
 export default App;
+
