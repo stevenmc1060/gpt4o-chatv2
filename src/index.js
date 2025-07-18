@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Trigger build
 console.log("OpenAI Key from Azure:", process.env.REACT_APP_AZURE_OPENAI_KEY);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
