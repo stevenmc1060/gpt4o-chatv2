@@ -22,3 +22,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .env
+
+#Azure Static WebSite ARtifacts
+.swa
+
+#Editor Folders (Just In Case)
+.vscode
+.idea
