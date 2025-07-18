@@ -18,6 +18,7 @@
     "remark-gfm": "^4.0.1",
     "web-vitals": "^2.1.4"
   },
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -29,6 +30,10 @@
       "react-app",
       "react-app/jest"
     ]
+    "scripts": {
+  "build": "echo REACT_APP_AZURE_OPENAI_KEY=$REACT_APP_AZURE_OPENAI_KEY && react-scripts build"
+}
+
   },
   "browserslist": {
     "production": [
