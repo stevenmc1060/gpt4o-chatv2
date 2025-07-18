@@ -57,7 +57,7 @@ function App() {
 
 
     if (!apiKey) {
-      console.error("Missing API key: VITE_OPENAI_API_KEY is not set.");
+      console.error("Missing API key: REACT_APP_AZURE_OPENAI_KEY is not set.");
       setLoading(false);
       return;
     }
