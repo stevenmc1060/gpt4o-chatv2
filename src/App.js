@@ -53,7 +53,8 @@ function App() {
     setInput("");
     setLoading(true);
 
-    const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
+    const apiKey = process.env.REACT_APP_AZURE_OPENAI_KEY;
+
 
     if (!apiKey) {
       console.error("Missing API key: VITE_OPENAI_API_KEY is not set.");
